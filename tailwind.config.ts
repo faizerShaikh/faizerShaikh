@@ -18,17 +18,9 @@ const config = {
       },
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        "primary-dark": "var(--primary-dark)",
-        "primary": "var(--primary)",
-        "primary-light": "var(--primary-light)",
-        "text-color-1": "#acafb5",
-        "text-color-2": "#D1D0D4",
+        "text-color-1": "var(--text-color-1)",
+        "text-color-2": "var(--text-color-2)",
         "code-1": "#1A5198",
         "code-2": "#5EA676",
         "code-3": "#C2A645",
@@ -40,8 +32,13 @@ const config = {
         "border": "hsl(var(--border))",
         "input": "hsl(var(--input))",
         "ring": "hsl(var(--ring))",
-        "background": "var(--background)",
-        "foreground": "var(--foreground)",
+        "background": "hsl(var(--background))",
+        "neutral-300": "var(--neutral-300)",
+        "foreground": "hsl(var(--foreground))",
+        "primary": {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         "secondary": {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -91,11 +88,11 @@ const config = {
         "fira-code": ["var(--font-fira-code)"],
       },
       screens: {
-        "md-lg": "920px",
+        lg: "1034px",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/line-clamp")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

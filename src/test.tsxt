@@ -1,15 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 html {
   scroll-behavior: smooth;
 }
-
 @layer base {
   :root {
-    --background: 0, 0%, 100%;
-    --foreground: 222.2 84% 4.9%;
+    --swiper-pagination-color: #ffff;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #ffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+
+    --background: #00101f;
+    --foreground: #acafb5;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,16 +25,14 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: #00101f;
+    --primary-dark: #010c16;
+    --primary-light: #081928;
+
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 206, 17%, 92%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --scrollbar-thumb: #c5ced3;
-    --text-color-1: #495057;
-    --text-color-2: #6c757d;
-    --neutral-300: #8e99a4;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -45,8 +51,8 @@ html {
   }
 
   .dark {
-    --background: 210, 11%, 15%;
-    --foreground: 210 40% 98%;
+    --background: #e7e7e7;
+    --foreground: #000000;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -54,15 +60,12 @@ html {
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --foreground: #000000;
+    --primary: #e7e7e7;
+    --primary-light: #081928;
 
-    --secondary: 210, 10%, 23%;
+    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --scrollbar-thumb: #65707b;
-    --text-color-1: #acafb5;
-    --text-color-2: #d1d0d4;
-    --neutral-300: #d4d4d4;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -98,10 +101,10 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-  background-color: hsl(var(--secondary));
+  background-color: var(--primary-light);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
+  background-color: var(--primary-dark);
   border-radius: 10px;
 }

@@ -6,6 +6,7 @@ import { FiInstagram } from "react-icons/fi";
 import { GrLinkedin } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import { ModeToggle } from "../ui/mode-toggle";
 
 export const NavMenuItems = [
   {
@@ -53,25 +54,24 @@ const Navbar = () => {
   return (
     <header
       className={`sticky top-0 z-30 py-7 transition-all ${
-        showBG ? "shadow-2xl bg-primary-light opacity-95" : ""
+        showBG ? "shadow-2xl bg-secondary opacity-95" : ""
       }`}
     >
       <nav className='container mx-auto flex justify-between items-center'>
         <a href='#top' className='flex justify-start items-center gap-2'>
-          {showBG && (
-            <Image
-              src={"/images/faizer-shaikh.png"}
-              alt='Faizer Shaikh'
-              width={40}
-              height={40}
-            />
-          )}
-          <p className='!m-0 font-semibold text-white text-xl underline'>
+          <Image
+            src={"/images/faizer-shaikh.png"}
+            alt='Faizer Shaikh'
+            width={40}
+            height={40}
+          />
+          <p className='!m-0 font-semibold text-text-color-1 text-xl underline'>
             faizer<span className='text-code-3'>.</span>shaikh
           </p>
         </a>
+
         <Sheet modal open={open} onOpenChange={(open) => setOpen(open)}>
-          <SheetTrigger asChild className='md-lg:hidden block'>
+          <SheetTrigger asChild className='lg:hidden block'>
             <div>
               <FiMenu size={28} />
             </div>
@@ -119,10 +119,11 @@ const Navbar = () => {
                   <FaGithub fontSize={20} className='hover:text-neutral-200' />
                 </div>
               </a>
+              <ModeToggle />
             </div>
           </SheetContent>
         </Sheet>
-        <ul className='md-lg:flex hidden justify-start items-center gap-6 font-fira-code text-text-color-2 font-medium'>
+        <ul className='lg:flex hidden justify-start items-center gap-6 font-fira-code text-text-color-2 font-medium'>
           {NavMenuItems.map((item, index) => (
             <li key={item.name} className='cursor-pointer'>
               <a href={`#${item.link}`}>
@@ -131,6 +132,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <li>
+            <ModeToggle />
+          </li>
         </ul>
       </nav>
     </header>

@@ -30,7 +30,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
             {item.name}
           </DialogTitle>
         </DialogHeader>
-        <div className='grid md-lg:grid-cols-2 grid-cols-1 gap-5 md:px-10 px-5 pb-10 overflow-y-auto max-h-[80vh]'>
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 md:px-10 px-5 pb-10 overflow-y-auto max-h-[80vh]'>
           <div className='flex flex-col gap-10'>
             <Swiper
               spaceBetween={50}
@@ -48,7 +48,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
               {item.images.map((image) => (
                 <SwiperSlide
                   key={image}
-                  className='bg-primary-light rounded-lg p-5 mb-8'
+                  className='bg-secondary rounded-lg p-5 mb-8'
                 >
                   <div className='w-full md:h-[400px] h-[200px] relative mb-3'>
                     <Image
@@ -83,7 +83,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-3 md-lg:overflow-y-auto md:h-[600px]'>
+          <div className='flex flex-col gap-3 lg:overflow-y-auto md:h-[600px]'>
             <div>
               <div className='font-semibold'>Project Description</div>
               <DialogDescription>{item.projectDescription}</DialogDescription>

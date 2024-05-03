@@ -12,11 +12,11 @@ const ContactMe = () => {
   return (
     <section id='contact-me'>
       <Heading number={4} title='get in touch' />
-      <div className='mx-auto md:my-32 my-28 grid grid-cols-1 md-lg:grid-cols-2 gap-10'>
+      <div className='mx-auto md:my-32 my-28 grid grid-cols-1 px-0 sm:px-16 lg:px-0 lg:grid-cols-2 gap-10'>
         <ContactMeForm />
-        <div className='justify-center md:items-start flex flex-col h-full md-lg:px-16 gap-6'>
+        <div className='justify-center md:items-start flex flex-col h-full gap-6'>
           <div className='flex justify-start items-center gap-5'>
-            <div className='flex justify-center items-center p-5 rounded-full bg-primary-light'>
+            <div className='flex justify-center items-center p-5 rounded-full bg-secondary'>
               <LiaPhoneVolumeSolid fontSize={32} />
             </div>
             <div className='flex flex-col gap-1'>
@@ -32,7 +32,7 @@ const ContactMe = () => {
             </div>
           </div>
           <div className='flex justify-start items-center gap-5'>
-            <div className='flex justify-center items-center p-5 rounded-full bg-primary-light'>
+            <div className='flex justify-center items-center p-5 rounded-full bg-secondary'>
               <LuMail fontSize={32} />
             </div>
             <div className='flex flex-col gap-1'>
@@ -48,7 +48,7 @@ const ContactMe = () => {
             </div>
           </div>
           <div className='flex justify-start items-center gap-5'>
-            <div className='flex justify-center items-center p-5 rounded-full bg-primary-light'>
+            <div className='flex justify-center items-center p-5 rounded-full bg-secondary'>
               <LuMail fontSize={32} />
             </div>
             <div className='flex flex-col gap-1'>
@@ -62,7 +62,7 @@ const ContactMe = () => {
             </div>
           </div>
           <div className='flex justify-start items-center gap-5'>
-            <div className='flex justify-center items-center p-5 rounded-full bg-primary-light'>
+            <div className='flex justify-center items-center p-5 rounded-full bg-secondary'>
               <IoShareSocialOutline fontSize={32} />
             </div>
             <div className='flex flex-col gap-1'>

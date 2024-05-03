@@ -43,7 +43,7 @@ export const Projects = () => {
           {projectsData.map((item) => (
             <SwiperSlide
               key={item.id}
-              className='bg-primary-light rounded-lg p-5 mb-8'
+              className='bg-secondary rounded-lg p-5 mb-8'
             >
               <ProjectCard item={item} />
             </SwiperSlide>

@@ -4,7 +4,7 @@ import React from "react";
 
 export const SkillItem = ({ item }: { item: Skill }) => {
   return (
-    <div className='flex justify-center items-center flex-col md:w-40 md:h-40 w-32 h-32 bg-primary-light rounded-xl'>
+    <div className='flex justify-center items-center flex-col md:w-40 md:h-40 w-32 h-32 bg-secondary rounded-xl'>
       <Image
         alt='react'
         src={`/images/logos/${item.icon}`}
