@@ -4,12 +4,13 @@ import React from "react";
 
 export const SkillItem = ({ item }: { item: Skill }) => {
   return (
-    <div className='flex justify-center items-center flex-col w-40 h-40 bg-primary-light rounded-xl'>
+    <div className='flex justify-center items-center flex-col md:w-40 md:h-40 w-32 h-32 bg-primary-light rounded-xl'>
       <Image
         alt='react'
         src={`/images/logos/${item.icon}`}
-        height={80}
-        width={80}
+        height={50}
+        width={50}
+        className='md:w-[80px] md:h-[80px]'
       ></Image>
       <h4 className='text-lg mt-2 font-medium text-text-color-2 text-center'>
         {item.title}

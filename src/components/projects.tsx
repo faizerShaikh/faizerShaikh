@@ -15,10 +15,8 @@ export const Projects = () => {
   return (
     <section id='projects'>
       <Heading number={2} title="projects i'have built" />{" "}
-      <div className='flex justify-between items-center mx-auto px-[4rem] my-[8rem]'>
+      <div className='flex justify-between items-center mx-auto md:px-[4rem] md:my-[8rem] my-16'>
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
           pagination={{
             dynamicBullets: true,
             horizontalClass: "mt-10",
@@ -26,6 +24,20 @@ export const Projects = () => {
           // autoplay={{
           //   delay: 2000,
           // }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
           modules={[Pagination, Navigation, Autoplay]}
         >
           {projectsData.map((item) => (

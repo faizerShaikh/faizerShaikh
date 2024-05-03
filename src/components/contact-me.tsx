@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Heading } from "./common";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import { LuMail } from "react-icons/lu";
@@ -12,9 +12,9 @@ const ContactMe = () => {
   return (
     <section id='contact-me'>
       <Heading number={4} title='get in touch' />
-      <div className='mx-auto my-[8rem] grid grid-cols-2 gap-5'>
+      <div className='mx-auto md-lg:my-[8rem] my-16 grid grid-cols-1 md-lg:grid-cols-2 gap-10'>
         <ContactMeForm />
-        <div className='justify-center items-start flex flex-col h-full px-16 gap-6'>
+        <div className='justify-center md:items-start flex flex-col h-full md-lg:px-16 gap-6'>
           <div className='flex justify-start items-center gap-5'>
             <div className='flex justify-center items-center p-5 rounded-full bg-primary-light'>
               <LiaPhoneVolumeSolid fontSize={32} />
@@ -24,7 +24,7 @@ const ContactMe = () => {
                 Phone Number
               </p>
               <a
-                className='text-text-color-2 font-medium text-lg no-underline'
+                className='text-text-color-2 font-medium text-lg no-underline break-all'
                 href='tel:+917030652233'
               >
                 +91 7030652233
@@ -40,7 +40,7 @@ const ContactMe = () => {
                 Email Address
               </p>
               <a
-                className='text-text-color-2 font-medium text-lg no-underline'
+                className='text-text-color-2 font-medium text-lg no-underline break-all'
                 href='mailto:+917030652233'
               >
                 faizershaikh25@gmail.com
@@ -55,7 +55,7 @@ const ContactMe = () => {
               <p className=' text-text-color-2 text-base font-normal mb-0'>
                 Address
               </p>
-              <p className='text-text-color-2 font-medium text-lg no-underline'>
+              <p className='text-text-color-2 font-medium text-lg no-underline break-all'>
                 Nawazish Park, Kondhwa Khurd, Pune 411048,
                 <br /> Maharashtra, India
               </p>
@@ -66,7 +66,7 @@ const ContactMe = () => {
               <IoShareSocialOutline fontSize={32} />
             </div>
             <div className='flex flex-col gap-1'>
-              <p className=' text-text-color-2 text-base font-normal mb-0'>
+              <p className=' text-text-color-2 text-base font-normal mb-0 break-all'>
                 Or Find Me On Social Media Instead
               </p>
               <div className='flex justify-start items-center py-3 gap-5'>

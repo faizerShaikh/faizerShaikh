@@ -90,6 +90,9 @@ const config = {
         "inter": ["var(--font-inter)"],
         "fira-code": ["var(--font-fira-code)"],
       },
+      screens: {
+        "md-lg": "920px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/line-clamp")],

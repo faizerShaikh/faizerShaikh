@@ -5,10 +5,10 @@ export const HeroSection = () => {
   return (
     <section
       id='hero-section'
-      className='flex justify-between items-center my-[8rem]'
+      className='flex-col md-lg:flex-row flex justify-between items-center gap-8 md-lg:gap-5 md-lg:my-[8rem] my-16 md:px-[4rem] px-0'
     >
-      <div className='flex flex-col justify-center w-1/2'>
-        <h1 className='text-6xl text-text-color-2'>
+      <div className='flex flex-col justify-center w-full md-lg:w-1/2'>
+        <h1 className='md:text-6xl sm:text-5xl text-4xl text-text-color-2'>
           Hello World<span className='text-code-4'>!</span>
           <br />I<span className='text-code-3'>'</span>am Faizer Shaikh
         </h1>
@@ -27,7 +27,11 @@ export const HeroSection = () => {
           </a>
         </p>
       </div>
-      <WindowCard>
+      <WindowCard
+        containerProps={{
+          className: "",
+        }}
+      >
         <div className='flex justify-start items-center'>
           <div className='w-[60px]'>1</div>
           <div className='hover:font-semibold'>{"<Stack>"}</div>

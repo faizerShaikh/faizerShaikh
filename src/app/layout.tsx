@@ -22,7 +22,7 @@ export default function RootLayout({
 
         <div className='container mx-auto px-5'>{children}</div>
         <footer className='flex justify-center items-center py-7 bg-primary-light'>
-          <p className='text-text-color-1 flex gap-1'>
+          <p className='text-text-color-1 flex gap-1 md:text-base text-xs'>
             2024 | Designed and coded with{" "}
             <FaHeart fontSize={24} className='text-red-600' />
             by Faizer Shaikh

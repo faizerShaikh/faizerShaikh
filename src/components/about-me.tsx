@@ -5,13 +5,13 @@ export const AboutMe = () => {
   return (
     <section id='about-me'>
       <Heading number={0} title='about me' />{" "}
-      <div className='flex justify-between items-center mx-auto px-[4rem] my-[8rem]'>
+      <div className='flex flex-col md-lg:flex-row justify-between items-center mx-auto md:px-[4rem] px-0 md-lg:gap-10 md-lg:my-[8rem] my-16'>
         <WindowCard
           innerContainerProps={{
             className: "w-full !p-0",
           }}
           containerProps={{
-            className: "!w-100% h-auto",
+            className: "h-auto",
           }}
         >
           <img
@@ -20,7 +20,7 @@ export const AboutMe = () => {
             className='w-full h-full rounded-b-lg'
           ></img>
         </WindowCard>
-        <p className='w-1/2 my-8'>
+        <p className='md-lg:w-1/2 w-full my-8'>
           I am a full-stack software engineer with over{" "}
           <span className='text-code-1 font-semibold'>2+ years</span> of
           experience dedicated to simplifying life with a few clicks through web

@@ -1,27 +1,28 @@
 "use client";
 
 import { Experiance } from "@/interfaces";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export const ExperianceItem = ({ item }: { item: Experiance }) => {
   const [viewMore, setViewMore] = useState(false);
+  const heading = useMemo(
+    () => (
+      <h4 className='text-lg text-code-7'>{`{"${item.startYear}-${
+        item.isCurrentJob ? "PRESENT" : item.endYear
+      }"}`}</h4>
+    ),
+    [item]
+  );
   return (
-    <div className='flex justify-start items-start mx-10 mb-14'>
-      <div className='px-5 pt-1 w-[30%]'>
-        <div className='flex justify-end items-center'>
-          <h4 className='text-lg text-code-7'>{`{"${item.startYear}-${
-            item.isCurrentJob ? "PRESENT" : item.endYear
-          }"}`}</h4>
-          {/* <h4 className='bg-text-color-2 pl-4 py-[4.5px] text-neutral-600'>
-		2022-PRESENT
-	  </h4> */}
-          {/* <div className='w-0 h-0  border-t-[17px] border-t-transparent border-l-[20px] border-l-text-color-2 border-b-[17px] border-b-transparent'></div> */}
-        </div>
+    <div className='flex flex-col md:flex-row justify-start items-start md:mx-10 mb-14'>
+      <div className='px-5 pt-1 w-[30%] md-lg:block hidden'>
+        <div className='justify-end items-center flex'>{heading}</div>
       </div>
-      <div className='border-l border-l-1 border-[#233554] w-[70%] relative'>
-        <h3 className='px-10 text-4xl font-semibold'>{item.jobRole}</h3>
-        <div className='flex justify-start items-center gap-4 px-10'>
+      <div className='md-lg:border-l border-l-0 border-[#233554] md-lg:w-[70%] w-full relative'>
+        <h3 className='md:px-10 text-4xl font-semibold'>{item.jobRole}</h3>
+        <div className='my-2 md-lg:hidden block md:px-10'>{heading}</div>
+        <div className='flex justify-start items-center gap-4 md:px-10'>
           <a
             href={item.companyWebsite}
             target='_blank'
@@ -34,8 +35,8 @@ export const ExperianceItem = ({ item }: { item: Experiance }) => {
             <p className='!m-0'>{item.location}</p>
           </div>
         </div>
-        <div className='px-16'>
-          <ul className='my-custome-list-style pt-2'>
+        <div className='md:px-16'>
+          <ul className='my-custome-list-style pt-2 pl-5 md:pl-0'>
             {item.details.map(
               (detail, index) =>
                 (index <= 2 || viewMore) && (
