@@ -57,10 +57,7 @@ const Navbar = () => {
       }`}
     >
       <nav className='container mx-auto flex justify-between items-center'>
-        <a
-          href='#hero-section'
-          className='flex justify-start items-center gap-2'
-        >
+        <a href='#top' className='flex justify-start items-center gap-2'>
           {showBG && (
             <Image
               src={"/images/faizer-shaikh.png"}

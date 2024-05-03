@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section
       id='hero-section'
-      className='flex-col md-lg:flex-row flex justify-between items-center gap-8 md-lg:gap-5 md-lg:my-[8rem] my-16 md:px-[4rem] px-0'
+      className='flex-col md-lg:flex-row flex justify-between items-center gap-8 md-lg:gap-5 md:my-32 mt-16 mb-28 md:px-[4rem] px-0'
     >
       <div className='flex flex-col justify-center w-full md-lg:w-1/2'>
         <h1 className='md:text-6xl sm:text-5xl text-4xl text-text-color-2'>

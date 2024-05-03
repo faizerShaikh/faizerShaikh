@@ -24,14 +24,14 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
           {item.name}
         </div>
       </DialogTrigger>
-      <DialogContent className='border-0 p-10 max-w-7xl'>
+      <DialogContent className='border-0 p-0 max-w-[1200px] w-[90%] !min-w-[400px]'>
         <DialogHeader>
-          <DialogTitle className='mb-2 text-xl font-bold text-neutral-300'>
+          <DialogTitle className='md:p-10 p-5 md:mt-0 mt-2 mb-2 md:text-xl text-lg font-bold text-neutral-300'>
             {item.name}
           </DialogTitle>
         </DialogHeader>
-        <div className='grid grid-cols-2 gap-5'>
-          <div>
+        <div className='grid md-lg:grid-cols-2 grid-cols-1 gap-5 md:px-10 px-5 pb-10 overflow-y-auto max-h-[80vh]'>
+          <div className='flex flex-col gap-10'>
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
@@ -39,6 +39,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
                 dynamicBullets: true,
                 horizontalClass: "mt-10",
               }}
+              className='w-full'
               // autoplay={{
               //   delay: 2000,
               // }}
@@ -49,7 +50,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
                   key={image}
                   className='bg-primary-light rounded-lg p-5 mb-8'
                 >
-                  <div className='w-full h-[400px] relative mb-3'>
+                  <div className='w-full md:h-[400px] h-[200px] relative mb-3'>
                     <Image
                       src={image}
                       alt={item.name}
@@ -60,13 +61,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
-          <div className='flex flex-col gap-3 overflow-y-auto h-[500px]'>
-            <div>
-              <div className='font-semibold'>Project Description</div>
-              <DialogDescription>{item.projectDescription}</DialogDescription>
-            </div>
-            <div className='grid grid-cols-2'>
+            <div className='grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-5'>
               <div>
                 <div className='font-semibold'>Role</div>
                 <DialogDescription>{item.role}</DialogDescription>
@@ -86,6 +81,12 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+          <div className='flex flex-col gap-3 md-lg:overflow-y-auto md:h-[600px]'>
+            <div>
+              <div className='font-semibold'>Project Description</div>
+              <DialogDescription>{item.projectDescription}</DialogDescription>
             </div>
             <div>
               <div className='font-semibold'>Responsibilites</div>

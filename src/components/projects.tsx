@@ -15,7 +15,7 @@ export const Projects = () => {
   return (
     <section id='projects'>
       <Heading number={2} title="projects i'have built" />{" "}
-      <div className='flex justify-between items-center mx-auto md:px-[4rem] md:my-[8rem] my-16'>
+      <div className='flex justify-between items-center mx-auto md:px-[4rem] md:my-32 my-28'>
         <Swiper
           pagination={{
             dynamicBullets: true,

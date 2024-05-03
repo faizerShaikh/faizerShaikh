@@ -5,6 +5,7 @@ import ContactMe from "@/components/contact-me";
 export default function Home() {
   return (
     <>
+      <div id='top'></div>
       <HeroSection />
       <AboutMe />
       <Experiance />

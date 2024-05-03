@@ -12,7 +12,7 @@ const ContactMe = () => {
   return (
     <section id='contact-me'>
       <Heading number={4} title='get in touch' />
-      <div className='mx-auto md-lg:my-[8rem] my-16 grid grid-cols-1 md-lg:grid-cols-2 gap-10'>
+      <div className='mx-auto md:my-32 my-28 grid grid-cols-1 md-lg:grid-cols-2 gap-10'>
         <ContactMeForm />
         <div className='justify-center md:items-start flex flex-col h-full md-lg:px-16 gap-6'>
           <div className='flex justify-start items-center gap-5'>

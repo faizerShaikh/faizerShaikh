@@ -12,7 +12,7 @@ export const WindowCard = ({
   return (
     <div
       {...containerProps}
-      className={`border-2 border-text-color-1 rounded-lg w-[80%] md:w-[80%] md-lg:w-[60%] lg:w-[50%] xl:w-[40%] ${containerProps?.className}`}
+      className={`border-2 border-text-color-1 rounded-lg w-[90%] md:w-[80%] md-lg:w-[60%] lg:w-[50%] xl:w-[40%] ${containerProps?.className}`}
     >
       <div className='flex justify-start items-center gap-2 border-b border-code-1 p-4'>
         <div className='h-4 w-4 rounded-full bg-code-6'></div>

@@ -5,7 +5,7 @@ export const AboutMe = () => {
   return (
     <section id='about-me'>
       <Heading number={0} title='about me' />{" "}
-      <div className='flex flex-col md-lg:flex-row justify-between items-center mx-auto md:px-[4rem] px-0 md-lg:gap-10 md-lg:my-[8rem] my-16'>
+      <div className='flex flex-col md-lg:flex-row justify-between items-center mx-auto md:px-[4rem] px-0 md-lg:gap-10 md:my-32 my-28'>
         <WindowCard
           innerContainerProps={{
             className: "w-full !p-0",

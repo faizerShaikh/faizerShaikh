@@ -20,7 +20,9 @@ export const ExperianceItem = ({ item }: { item: Experiance }) => {
         <div className='justify-end items-center flex'>{heading}</div>
       </div>
       <div className='md-lg:border-l border-l-0 border-[#233554] md-lg:w-[70%] w-full relative'>
-        <h3 className='md:px-10 text-4xl font-semibold'>{item.jobRole}</h3>
+        <h3 className='md:px-10 md:text-4xl text-3xl font-semibold'>
+          {item.jobRole}
+        </h3>
         <div className='my-2 md-lg:hidden block md:px-10'>{heading}</div>
         <div className='flex justify-start items-center gap-4 md:px-10'>
           <a

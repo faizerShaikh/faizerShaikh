@@ -7,7 +7,7 @@ export const Experiance = () => {
   return (
     <section id='experience'>
       <Heading number={1} title='professional journey' />
-      <div className='md-lg:my-[8rem] my-16'>
+      <div className='md:my-32 my-28'>
         {experianceData.map((item) => (
           <ExperianceItem item={item} key={item.companyName} />
         ))}
