@@ -10,9 +10,12 @@ export const AboutMe = () => {
           innerContainerProps={{
             className: "w-full !p-0",
           }}
-          containerProps={{
-            className: "h-auto",
-          }}
+          containerProps={
+            {
+              "className": "h-auto",
+              "data-aos": "fade-right",
+            } as any
+          }
         >
           <img
             src='/images/my-pic.jpg'
@@ -20,9 +23,9 @@ export const AboutMe = () => {
             className='w-full h-full rounded-b-lg'
           ></img>
         </WindowCard>
-        <p className='lg:w-1/2 w-full my-8'>
+        <p className='lg:w-1/2 w-full my-8' data-aos='fade-left'>
           I am a full-stack software engineer with over{" "}
-          <span className='text-code-1 font-semibold'>2+ years</span> of
+          <span className='text-code-1 font-semibold'>3+ years</span> of
           experience dedicated to simplifying life with a few clicks through web
           application development.
           <span className='block py-3' />

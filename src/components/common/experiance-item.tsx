@@ -16,10 +16,13 @@ export const ExperianceItem = ({ item }: { item: Experiance }) => {
   );
   return (
     <div className='flex flex-col md:flex-row justify-start items-start md:mx-10 mb-14'>
-      <div className='px-5 pt-1 w-[30%] lg:block hidden'>
+      <div className='px-5 pt-1 w-[30%] lg:block hidden' data-aos='fade-right'>
         <div className='justify-end items-center flex'>{heading}</div>
       </div>
-      <div className='lg:border-l border-l-0 border-[#233554] lg:w-[70%] w-full relative'>
+      <div
+        className='lg:border-l border-l-0 border-[#233554] lg:w-[70%] w-full relative'
+        data-aos='fade-left'
+      >
         <h3 className='md:px-10 md:text-4xl text-3xl font-semibold'>
           {item.jobRole}
         </h3>

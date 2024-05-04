@@ -19,11 +19,14 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className='cursor-pointer'>
-          {theme === "light" ? (
-            <FiSun fontSize={18} />
-          ) : (
-            <BsMoonStars fontSize={18} />
-          )}
+          <FiSun
+            fontSize={18}
+            className={`${theme === "light" ? "block" : "hidden"}`}
+          />
+          <BsMoonStars
+            fontSize={18}
+            className={`${theme === "dark" ? "block" : "hidden"}`}
+          />
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='border-secondary'>

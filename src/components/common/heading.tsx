@@ -20,7 +20,7 @@ export const Heading = ({
       <h2 className='md:text-3xl text-xl flex justify-start items-center text-text-color-2'>
         <span className={numberClass[number]}>[{number}]</span>:
         <span className='pl-7 font-bold decoration-code-3 pr-2'>{title}</span>
-        <div className='flex-grow border-[#233554] border-t-[0.5px]'></div>
+        <div className='flex-grow border-secondary border-t-[0.5px]'></div>
       </h2>
     </>
   );

@@ -21,9 +21,9 @@ export const Projects = () => {
             dynamicBullets: true,
             horizontalClass: "mt-10",
           }}
-          // autoplay={{
-          //   delay: 2000,
-          // }}
+          autoplay={{
+            delay: 2000,
+          }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -43,7 +43,7 @@ export const Projects = () => {
           {projectsData.map((item) => (
             <SwiperSlide
               key={item.id}
-              className='bg-secondary rounded-lg p-5 mb-8'
+              className='bg-secondary rounded-lg p-5 mb-8 hover:shadow-xl hover:shadow-primary-light transition-all hover:scale-50'
             >
               <ProjectCard item={item} />
             </SwiperSlide>

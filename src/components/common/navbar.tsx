@@ -12,53 +12,80 @@ export const NavMenuItems = [
   {
     name: "about me",
     link: "about-me",
+    className: "delay-0",
   },
   {
     name: "experience",
     link: "experience",
+    className: "delay-200",
   },
   {
     name: "projects",
     link: "projects",
+    className: "delay-400",
   },
   {
     name: "skills",
     link: "skills",
+    className: "delay-600",
   },
   {
     name: "contact me",
     link: "contact-me",
+    className: "delay-800",
   },
 ];
 
-const Navbar = () => {
-  const [showBG, setShowBg] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const changeShowBG = () => {
-    if (window.scrollY >= 110) {
-      setShowBg(true);
-    } else {
-      setShowBg(false);
-    }
-  };
+function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(
+    null
+  );
+  const [showBg, setShwoBg] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", changeShowBG);
-    window.scrollTo(0, 0);
-    return () => {
-      window.removeEventListener("scroll", changeShowBG);
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (
+        direction !== scrollDirection &&
+        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
+      ) {
+        setScrollDirection(direction);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+
+      if (window.scrollY >= 90) {
+        setShwoBg(true);
+      } else {
+        setShwoBg(false);
+      }
     };
-  }, []);
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    };
+  }, [scrollDirection, showBg]);
+
+  return { scrollDirection, showBg };
+}
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const { scrollDirection, showBg } = useScrollDirection();
 
   return (
     <header
-      className={`sticky top-0 z-30 py-7 transition-all ${
-        showBG ? "shadow-2xl bg-secondary opacity-95" : ""
-      }`}
+      className={`sticky z-30 py-7 transition-all bg-background ${
+        showBg ? "shadow-2xl" : ""
+      } ${scrollDirection === "down" ? "-top-24" : "top-0"}  `}
     >
       <nav className='container mx-auto flex justify-between items-center'>
-        <a href='#top' className='flex justify-start items-center gap-2'>
+        <a
+          href='#top'
+          className='flex justify-start items-center gap-2 animate-fade animate-duration-1000 animate-ease-in'
+        >
           <Image
             src={"/images/faizer-shaikh.png"}
             alt='Faizer Shaikh'
@@ -125,14 +152,17 @@ const Navbar = () => {
         </Sheet>
         <ul className='lg:flex hidden justify-start items-center gap-6 font-fira-code text-text-color-2 font-medium'>
           {NavMenuItems.map((item, index) => (
-            <li key={item.name} className='cursor-pointer'>
+            <li
+              key={item.name}
+              className={`cursor-pointer animate-fade-down animate-duration-200 animate-ease-in ${item.className}`}
+            >
               <a href={`#${item.link}`}>
                 <span className={`text-code-${index}`}>[{index}]</span>:
                 {item.name}
               </a>
             </li>
           ))}
-          <li>
+          <li className='animate-fade-down animate-duration-200 animate-ease-in delay-1000'>
             <ModeToggle />
           </li>
         </ul>

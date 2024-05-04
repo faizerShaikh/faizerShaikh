@@ -83,6 +83,29 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      transitionDelay: {
+        0: "0ms",
+        100: "100ms",
+        200: "200ms",
+        300: "300ms",
+        400: "400ms",
+        500: "500ms",
+        600: "600ms",
+        700: "700ms",
+        800: "800ms",
+        900: "900ms",
+        1000: "1000ms",
+        1100: "1100ms",
+        1200: "1200ms",
+        1300: "1300ms",
+        1400: "1400ms",
+        1500: "1500ms",
+        1600: "1600ms",
+        1700: "1700ms",
+        1800: "1800ms",
+        1900: "1900ms",
+        2000: "2000ms",
+      },
       fontFamily: {
         "inter": ["var(--font-inter)"],
         "fira-code": ["var(--font-fira-code)"],
@@ -92,7 +115,11 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-animated"),
+    require("@tailwindcss/line-clamp"),
+  ],
 } satisfies Config;
 
 export default config;

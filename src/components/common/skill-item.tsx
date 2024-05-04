@@ -2,9 +2,12 @@ import { Skill } from "@/interfaces";
 import Image from "next/image";
 import React from "react";
 
-export const SkillItem = ({ item }: { item: Skill }) => {
+export const SkillItem = ({ item, index }: { item: Skill; index: number }) => {
   return (
-    <div className='flex justify-center items-center flex-col md:w-40 md:h-40 w-32 h-32 bg-secondary rounded-xl'>
+    <div
+      className='flex justify-center items-center flex-col md:w-40 md:h-40 w-32 h-32 bg-secondary rounded-xl'
+      data-aos={`fade-${index % 2 === 0 ? "zoom-out-right" : "zoom-out-left"}`}
+    >
       <Image
         alt='react'
         src={`/images/logos/${item.icon}`}

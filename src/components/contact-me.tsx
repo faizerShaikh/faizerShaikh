@@ -14,7 +14,10 @@ const ContactMe = () => {
       <Heading number={4} title='get in touch' />
       <div className='mx-auto md:my-32 my-28 grid grid-cols-1 px-0 sm:px-16 lg:px-0 lg:grid-cols-2 gap-10'>
         <ContactMeForm />
-        <div className='justify-center md:items-start flex flex-col h-full gap-6'>
+        <div
+          className='justify-center md:items-start flex flex-col h-full gap-6'
+          data-aos='fade-left'
+        >
           <div className='flex justify-start items-center gap-5'>
             <div className='flex justify-center items-center p-5 rounded-full bg-secondary'>
               <LiaPhoneVolumeSolid fontSize={32} />
@@ -56,7 +59,7 @@ const ContactMe = () => {
                 Address
               </p>
               <p className='text-text-color-2 font-medium text-lg no-underline break-all'>
-                Nawazish Park, Kondhwa Khurd, Pune 411048,
+                Kondhwa Khurd, Pune 411048,
                 <br /> Maharashtra, India
               </p>
             </div>

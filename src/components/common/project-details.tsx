@@ -20,7 +20,7 @@ const ProjectDetails = ({ item }: { item: ProjectInterface }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className='text-lg font-semibold mb-3 line-clamp-1 underline cursor-pointer hover:font-bold hover:text-code-1'>
+        <div className='text-lg font-semibold mb-3 line-clamp-1 underline cursor-pointer hover:font-bold'>
           {item.name}
         </div>
       </DialogTrigger>

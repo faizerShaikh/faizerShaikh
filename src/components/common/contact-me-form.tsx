@@ -56,7 +56,7 @@ const ContactMeForm = () => {
   };
 
   return (
-    <div className='bg-secondary p-10 rounded-xl'>
+    <div className='bg-secondary p-10 rounded-xl' data-aos='fade-right'>
       <h3 className='md:text-5xl text-3xl font-medium mb-5 text-text-color-2'>
         Let's work together!
       </h3>
