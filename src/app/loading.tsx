@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-const Loading = () => {
+export default function Loading() {
   return (
-    <section className='h-screen w-screen flex justify-center items-center bg-background text-foreground'>
+    <section className='h-screen w-full flex justify-center items-center bg-background text-foreground'>
       <Image
         src={"/images/faizer-shaikh.png"}
         alt='Faizer Shaikh'
@@ -13,6 +13,4 @@ const Loading = () => {
       />
     </section>
   );
-};
-
-export default Loading;
+}

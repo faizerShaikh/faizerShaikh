@@ -126,13 +126,7 @@ export const projectsData: ProjectInterface[] = [
           "The platform features an intuitive interface, making it easy for users to navigate and manage inventory, orders, and supply chain operations efficiently.",
       },
     ],
-    images: [
-      "/images/projects/cms/1.jpg",
-      "/images/projects/cms/2.jpg",
-      "/images/projects/cms/3.jpg",
-      "/images/projects/cms/4.jpg",
-      "/images/projects/cms/5.jpg",
-    ],
+    images: ["/images/projects/no-preview.png"],
     role: "Full Stack Developer",
     responsibilites: [
       "Led the development of both frontend and backend components using Next.js for the frontend and Express.js for the backend, ensuring seamless integration and functionality across the application.",
@@ -230,16 +224,7 @@ export const projectsData: ProjectInterface[] = [
           "Automate tasks with features like custom form builders, customizable email templates, PDF generation, Excel exports, bulk imports, and automated email notifications.",
       },
     ],
-    images: [
-      "/images/projects/360-assessment-tool/1.jpg",
-      "/images/projects/360-assessment-tool/2.jpg",
-      "/images/projects/360-assessment-tool/3.jpg",
-      "/images/projects/360-assessment-tool/4.jpg",
-      "/images/projects/360-assessment-tool/5.jpg",
-      "/images/projects/360-assessment-tool/6.jpg",
-      "/images/projects/360-assessment-tool/7.jpg",
-      "/images/projects/360-assessment-tool/8.jpg",
-    ],
+    images: ["/images/projects/no-preview.png"],
     role: "Full Stack Developer & Technical Lead",
     responsibilites: [
       "Led the development of both frontend and backend components using Angular for the frontend and NestJS for the backend, ensuring seamless integration and functionality across the application.",
@@ -248,5 +233,61 @@ export const projectsData: ProjectInterface[] = [
       "Implemented key features such as call management, incident and job management, user role management, and task automation, ensuring that the application meets the requirements of streamlined client incident and job management.",
     ],
     techStack: ["Angular", "NestJS", "MongoDB", "Docker", "Redis"],
+  },
+  {
+    id: 6,
+    name: "School Management System",
+    projectDescription:
+      "A comprehensive School Management System featuring workflows for admission to intake new students, payment module, student module, classroom management, announcements module, teacher management, staff management, and more. The application is built with Angular for the frontend, Django for the backend, and PostgreSQL for the database. It boasts a modern design developed for ease of operations in schools.",
+    features: [
+      {
+        name: "Admission Workflow",
+        description:
+          "Streamlines the admission process to intake new students efficiently, ensuring seamless enrollment.",
+      },
+      {
+        name: "Payment Module",
+        description:
+          "Facilitates payment processing for various school-related transactions, including fees, fines, and purchases.",
+      },
+      {
+        name: "Student Module",
+        description:
+          "Manages student information, including enrollment details, academic records, attendance, and performance.",
+      },
+      {
+        name: "Classroom Management",
+        description:
+          "Organizes and manages classroom assignments, schedules, and resources for effective teaching and learning.",
+      },
+      {
+        name: "Announcements Module",
+        description:
+          "Enables school administrators to broadcast announcements and important updates to students, parents, and staff.",
+      },
+      {
+        name: "Teacher Management",
+        description:
+          "Handles teacher profiles, assignments, schedules, and performance evaluations to support effective teaching practices.",
+      },
+      {
+        name: "Staff Management",
+        description:
+          "Manages staff profiles, roles, responsibilities, and payroll information to ensure smooth operation of school administration.",
+      },
+    ],
+    images: [
+      "/images/projects/sms/1.png",
+      "/images/projects/sms/2.png",
+      "/images/projects/sms/3.png",
+      "/images/projects/sms/4.png",
+    ],
+    role: "Full Stack Developer",
+    responsibilites: [
+      "Implemented key features such as admission workflow, payment module, student module, classroom management, announcements module, teacher management, and staff management, ensuring that the application meets the requirements of comprehensive school management.",
+      "Contributed to technical design discussions and documentation, providing insights and recommendations to optimize system architecture, performance, and scalability for the School Management System.",
+      "Managed the PostgreSQL database solution, including schema design, query optimization, and data manipulation, to support efficient storage and retrieval of school-related information such as student records, class schedules, and staff profiles.",
+    ],
+    techStack: ["Angular", "Django", "PostgreSQL"],
   },
 ];
