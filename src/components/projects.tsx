@@ -43,7 +43,7 @@ export const Projects = () => {
           {projectsData.map((item) => (
             <SwiperSlide
               key={item.id}
-              className='bg-secondary rounded-lg p-5 mb-8 hover:shadow-xl hover:shadow-primary-light transition-all hover:scale-50'
+              className='bg-secondary rounded-lg p-5 mb-8 hover:shadow-xl hover:shadow-primary-light transition-all'
             >
               <ProjectCard item={item} />
             </SwiperSlide>
