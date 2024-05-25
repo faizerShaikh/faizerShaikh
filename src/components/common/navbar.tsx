@@ -6,7 +6,7 @@ import { FiInstagram } from "react-icons/fi";
 import { GrLinkedin } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
-import { ModeToggle } from "../ui/mode-toggle";
+// import { ModeToggle } from "../ui/mode-toggle";
 
 export const NavMenuItems = [
   {
@@ -146,7 +146,7 @@ const Navbar = () => {
                   <FaGithub fontSize={20} className='hover:text-neutral-200' />
                 </div>
               </a>
-              <ModeToggle />
+              {/* <ModeToggle /> */}
             </div>
           </SheetContent>
         </Sheet>
@@ -162,9 +162,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className='animate-fade-down animate-duration-200 animate-ease-in delay-1000'>
+          {/* <li className='animate-fade-down animate-duration-200 animate-ease-in delay-1000'>
             <ModeToggle />
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
