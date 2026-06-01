@@ -109,21 +109,21 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/faizerShaikh/faizerShaikh/output/snake.svg" alt="Snake animation" />
+<!-- <img src="https://raw.githubusercontent.com/faizerShaikh/faizerShaikh/output/snake.svg" alt="Snake animation" /> -->
 
 ###
 
 <br clear="both">
 
-<div align="left">
+<!-- <div align="left">
   <img src="https://streak-stats.demolab.com?user=faizerShaikh&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph" /> <br>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=faizerShaikh&radius=16&theme=react&area=true&order=5" height="300" alt="activity-graph graph"  />
-</div>
+</div> -->
 
 ###
 
-<div align="center">
+<!-- <div align="center">
   <img src="https://profile-counter.glitch.me/faizerShaikh/count.svg?"  />
-</div>
+</div> -->
 
 ###
